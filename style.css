@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    color: #212121;
+    font-size: 14px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 80px;
+    border-bottom: 1px solid #eeeeee;
+    background: white;
+}
+
+.header-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #212121;
+}
+
+.logo span {
+    color: #2196f3;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+    margin-left: 70px;
+}
+
+.navigation a {
+    font-size: 14px;
+}
+
+.contacts {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+    color: #757575;
+    font-size: 13px;
+}
+
+.hero {
+    height: 480px;
+    background: #2f303a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+button {
+    border: 0;
+    background: #2196f3;
+    color: white;
+    padding: 14px 25px;
+    margin-top: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1887df;
+}
+
+.advantages {
+    padding: 70px 0 45px;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantage {
+    width: 23%;
+}
+
+.advantage h3 {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.advantage p {
+    color: #757575;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.works {
+    padding: 40px 0 80px;
+}
+
+.works h2,
+.team h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.works-list {
+    display: flex;
+    gap: 30px;
+}
+
+.work img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.work p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 13px;
+    font-size: 13px;
+}
+
+.team {
+    background: #f5f4fa;
+    padding: 70px 0 80px;
+}
+
+.team-list {
+    display: flex;
+    gap: 25px;
+}
+
+.person {
+    width: 25%;
+    background: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.person img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.person h3 {
+    font-size: 15px;
+    margin-top: 18px;
+}
+
+.person p {
+    color: #757575;
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+.contact-section {
+    background: #2196f3;
+    color: white;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 16px;
+}
+
+.contact-section button {
+    background: white;
+    color: #2196f3;
+}
+
+.footer {
+    background: #2f303a;
+    color: white;
+    padding: 45px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer p {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+
+    .contacts {
+        display: none;
+    }
+
+    .advantages-list {
+        flex-wrap: wrap;
+    }
+
+    .advantage {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+
+    .team-list {
+        flex-wrap: wrap;
+    }
+
+    .person {
+        width: 48%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .header-box {
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        margin-left: 30px;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .advantages-list {
+        display: block;
+    }
+
+    .advantage {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .works-list {
+        display: block;
+    }
+
+    .work {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .team-list {
+        display: block;
+    }
+
+    .person {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        display: block;
+    }
+
+    .footer-links {
+        margin-top: 25px;
+    }
+}
