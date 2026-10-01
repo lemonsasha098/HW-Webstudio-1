@@ -4,6 +4,7 @@ body {
     font-family: Roboto, Arial, sans-serif;
     color: #212121;
     font-size: 14px;
+    margin: 0;
 }
 
 .container {
@@ -27,6 +28,7 @@ body {
     font-size: 22px;
     font-weight: 700;
     color: #212121;
+    text-decoration: none;
 }
 
 .logo span {
@@ -35,20 +37,28 @@ body {
 
 .navigation {
     display: flex;
+    align-items: center;
     gap: 30px;
     margin-left: 70px;
 }
 
 .navigation a {
     font-size: 14px;
+    color: #212121;
+    text-decoration: none;
 }
 
 .contacts {
     margin-left: auto;
     display: flex;
+    align-items: center;
     gap: 20px;
+}
+
+.contacts a {
     color: #757575;
     font-size: 13px;
+    text-decoration: none;
 }
 
 .hero {
@@ -60,11 +70,18 @@ body {
     text-align: center;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero-content h1 {
     color: white;
     font-size: 38px;
     line-height: 1.2;
     font-weight: 700;
+    margin: 0;
 }
 
 button {
@@ -88,10 +105,11 @@ button:hover {
 .advantages-list {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .advantage {
-    width: 23%;
+    flex: 1;
 }
 
 .advantage h3 {
@@ -118,7 +136,14 @@ button:hover {
 
 .works-list {
     display: flex;
+    justify-content: space-between;
     gap: 30px;
+}
+
+.work {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .work img {
@@ -128,10 +153,7 @@ button:hover {
 }
 
 .work p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin: 0;
     background: rgba(0, 0, 0, 0.65);
     color: white;
     padding: 13px;
@@ -145,14 +167,18 @@ button:hover {
 
 .team-list {
     display: flex;
+    justify-content: space-between;
     gap: 25px;
 }
 
 .person {
-    width: 25%;
+    flex: 1;
     background: white;
     text-align: center;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .person img {
@@ -179,6 +205,12 @@ button:hover {
     text-align: center;
 }
 
+.contact-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .contact-section h2 {
     font-size: 30px;
     margin-bottom: 10px;
@@ -202,6 +234,7 @@ button:hover {
 .footer-content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .footer-logo {
@@ -218,8 +251,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.footer-links a {
     color: #aaaaaa;
     font-size: 12px;
+    text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -236,8 +273,7 @@ button:hover {
     }
 
     .advantage {
-        width: 48%;
-        margin-bottom: 30px;
+        flex: 0 0 48%;
     }
 
     .team-list {
@@ -245,7 +281,7 @@ button:hover {
     }
 
     .person {
-        width: 48%;
+        flex: 0 0 48%;
     }
 }
 
@@ -273,34 +309,23 @@ button:hover {
     }
 
     .advantages-list {
-        display: block;
-    }
-
-    .advantage {
-        width: 100%;
-        margin-bottom: 25px;
+        flex-direction: column;
     }
 
     .works-list {
-        display: block;
-    }
-
-    .work {
-        width: 100%;
-        margin-bottom: 20px;
+        flex-direction: column;
     }
 
     .team-list {
-        display: block;
+        flex-direction: column;
     }
 
     .person {
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .footer-content {
-        display: block;
+        flex-direction: column;
     }
 
     .footer-links {
